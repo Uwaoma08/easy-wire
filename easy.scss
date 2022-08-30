@@ -1,0 +1,356 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+// Variables
+$whiteColor : #fff;
+$off-white: #f9fafb;
+$purple : #7d33ed;
+$blackColor: #111827;
+$light-black: #4b5563;
+$grey:#9ca3af;
+$lines: #ebebeb;
+$open-sans: 'Open Sans', sans-serif;
+$smaller-font: 10px;
+$small-font: 12px;
+$medium-font: 16px;
+$big-font: 19px;
+
+
+.container{
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    border-bottom: 2px solid $lines;
+    
+}
+
+.section-one{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    background-color: $off-white;
+    width: 100%;
+    border-right: 1px solid $lines;
+}
+
+.section-one-container{
+    padding: 5px;
+    padding-right: 0;
+    
+    h3{
+        font-size: 25px;
+        font-family: $open-sans;
+    }
+}
+.logo-h3{
+    background-color: lighten($purple, 40%);
+    padding: 10px;
+    .la-cookie{
+        color: $purple;
+        font-size: 40px;  
+        padding-right: 5px;
+        //padding-left: 10px;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.la-times-circle{
+    &:hover{color: red;}
+    width: 100%;
+    padding: 5px;
+    font-size: 25px;
+    //margin-left: 250px;
+    cursor: pointer;
+    color: darken($purple, 20%);
+    display: flex;
+    justify-content: end;
+}
+
+.menu-icons{
+    margin-top: 10px;
+    border-bottom: 1px solid $lines;
+    padding-bottom: 20px;
+    .las{
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 30px;
+        color: $grey;
+    }
+    a{
+        font-size: $big-font;
+        text-decoration: none;
+        font-weight: 600;
+        font-family: $open-sans;
+        color: $light-black;
+    }
+}
+    li{
+        padding-left: 10px;
+        cursor: pointer;
+        &:hover{
+            background-color: lighten($purple, 40%);
+            border-left: 4px solid $purple;
+            a{
+                color: darken($purple, 10%);
+            }
+            .las{
+                color: darken($purple, 10%);
+            }
+        }
+    }
+.section-one-footer{
+    margin-top: 10px;
+}
+.help-logout{
+    margin-bottom: 15px;
+    .las{
+        padding-right: 10px;
+        font-size: 20px;
+        color: $grey;
+    }
+    .help{
+        font-size: $medium-font;
+        color: $light-black;
+        padding-left: 5px;
+        cursor: pointer;
+    }
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+
+.section-two{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0px;
+    background-color: $whiteColor;
+    width: 100%;
+}
+.bar-search{
+    width: 100%;
+    i{
+        margin-left: 20px;
+        font-size: 25px;
+        color: $grey;
+    }
+    display: flex;
+    align-items: center; 
+}
+.la-bars{
+    cursor: pointer;
+}
+.section-two-container{
+    margin: 0px 20px;
+    margin-bottom: 0px;
+}
+
+.search-noti-icon{
+    width: 100%;
+    border-bottom: 1px solid $lines;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    margin: 0px 10px;
+   
+    input{
+        width: 90%;
+        margin-left: 5px;
+        border-style: none;
+        &:focus {
+            outline: none;
+        }
+
+        &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: $grey;
+            font-size: $smaller-font;
+            
+        }
+    }
+}
+.search-noti-icon{
+    width: 100%;
+    i{
+        color: $grey;
+    }
+    .la-search{
+        transform: rotate(-90deg);
+        color: $grey;
+        margin-left: 0px;
+    }
+}
+
+//Fonts
+
+.f-12{
+    font-size: 12px;
+}
+
+.settings{
+    padding: 15px 0px;
+    ul{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    li{
+        list-style: none;
+        padding: 5px;
+        &:hover{background-color: lighten($purple, 40%);
+            border-left: none;
+        }
+    }
+}
+
+.hide-text{
+    display: none;
+}
+.profile-account{
+    color: $blackColor;
+    font-size: $medium-font;
+    font-weight: 600;
+    font-family: $open-sans;
+    padding-bottom: 5px;
+}
+
+.settings{
+    h3{
+        font-size: $big-font;
+        color: $blackColor;
+        font-family: $open-sans;
+        margin-bottom: 20px;
+    }
+}
+.pub-info{
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: $small-font;
+    color: $grey;
+}
+.profile-info{
+    border-top: 1px solid $lines;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: $smaller-font;
+    padding: 15px 0;
+    margin: 10px 0;
+    font-family: $open-sans;
+    .las{
+        font-size: 30px;
+    }
+    span{
+        margin-right: 5px;
+        padding-right: 5px;
+        border-right: 1px solid $lines;
+        
+    }
+    }
+.remove-margin{
+    margin: 0;
+}
+.margin-top{
+    margin-top: 40px;
+}
+.profile-info{
+    font-weight: 600;
+    .p-1{
+        width: 100%;
+        color: $grey;
+    }
+    .p-2{
+        width: 100%;
+        //padding-left: 50px;
+        color: $blackColor;
+        img{
+            border-radius: 50%;
+            height: 30px;
+            margin-top: 10px;
+        }
+    }
+    .p-3{
+        width: 100%;
+        color: $purple;
+        text-align: end;
+    }
+}
+
+@media(min-width:768px){
+    .container{
+        display: flex;
+    }
+   .section-one{
+    width: 30%;
+    position: relative;
+    z-index: 0;
+    display: block;
+   }
+
+   .menu-icons{
+    a{
+        font-size: $medium-font;
+    }
+   }
+   .section-two{
+    width: 70%;
+    z-index: 0;
+   }
+   .help{
+    a{
+        font-size: 14px;
+    }
+   }
+   .la-times-circle{
+    display: none;
+   }
+   .section-two-container{
+    .las{
+        display: none;
+    }
+}
+
+@media(min-width:769px){
+    .la-bars{
+        display: none;
+    }
+    .hide-text{
+        display: block;
+    }
+
+    
+    }
+    .settings{
+        ul{
+            li{
+                &:hover{
+                    border-bottom:2px solid $purple;
+                }
+            }
+            span{
+                font-size: $small-font;
+                font-family: $open-sans;
+                font-weight: 600;
+                color: $grey;
+
+            }
+        }
+    }
+
+}
+
+
+.display-section-one{
+    display: block;
+}
